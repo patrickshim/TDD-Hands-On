@@ -42,6 +42,10 @@ class TestCase(unittest.TestCase):
     expected = False
     self.assertEqual(check_pwd(input), expected)
   
+  def test9(self):
+    input = "1qwerQWER!@#$"
+    expected = True
+    self.assertEqual(check_pwd(input), expected)
 
 if __name__ == '__main__':
   unittest.main()
