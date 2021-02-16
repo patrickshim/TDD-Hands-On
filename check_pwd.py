@@ -6,5 +6,8 @@ def check_pwd(pwd):
     return False
   elif len(pwd) > 20:
     return False
+  #https://www.tutorialspoint.com/How-to-check-if-a-Python-string-contains-only-digits
+  elif pwd.isdigit():
+    return False
 
   return True
