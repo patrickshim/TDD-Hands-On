@@ -26,6 +26,11 @@ class TestCase(unittest.TestCase):
     input = "77777777777777777"
     expected = False 
     self.assertEqual(check_pwd(input), expected)
-  
+
+  def test6(self):
+    input = "111111111F"
+    expected = False
+    self.assertEqual(check_pwd(input), expected)
+
 if __name__ == '__main__':
   unittest.main()
