@@ -1,3 +1,4 @@
+import re
 #2/15/2021
 #https://stackoverflow.com/questions/41117733/validation-of-a-password-python
 
@@ -8,6 +9,8 @@ def check_pwd(pwd):
     return False
   #https://www.tutorialspoint.com/How-to-check-if-a-Python-string-contains-only-digits
   elif pwd.isdigit():
+    return False
+  elif re.search('[a-z]', pwd) is None:
     return False
 
   return True
