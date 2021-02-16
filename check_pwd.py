@@ -1,6 +1,7 @@
 import re
 #2/15/2021
 #https://stackoverflow.com/questions/41117733/validation-of-a-password-python
+SpecialSym = ['`','~','!','@','#','$','%','^','&','*','(',')','-','_','=','+']
 
 def check_pwd(pwd):
   if len(pwd) < 8:
@@ -14,5 +15,8 @@ def check_pwd(pwd):
     return False
   elif re.search('[A-Z]', pwd) is None:
     return False
-    
+  #https://www.geeksforgeeks.org/password-validation-in-python/
+  elif not any(char in SpecialSym for char in pwd):
+    return False    
+  
   return True
